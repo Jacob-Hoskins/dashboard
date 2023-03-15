@@ -6,6 +6,6 @@ const router = express.Router();
 //router.get("/", viewsController.getAllSymbols);
 // router.get("/:stockID", viewsController.getAllSymbols);
 router.get("/", viewsController.getAllSymbols);
-router.get("/rsi/:stockSymbol", viewsController.stockRSI);
+router.get("/:stockSymbol", viewsController.stockDetails);
 
 module.exports = router;

@@ -6,8 +6,6 @@ const viewRouter = require("./routes/viewRoutes");
 const axios = require("axios");
 const options = require("./endpoints/options");
 
-let x;
-
 const app = express();
 
 app.set("view engine", "pug");
