@@ -15,6 +15,7 @@ exports.getAllSymbols = async (req, res, next) => {
   res.status(200).render("base", {
     StockName: stock,
     StockSym: options.testData,
+    num: "5",
   });
 };
 
@@ -63,6 +64,14 @@ exports.stockRSI = async (req, res, next) => {
   const x = await axios.get(options.rsiURL, options.oneWeekRSI);
 
   //   const fullName = options.oneWeekRSI.params.console.log(await x.data.values);
+  res.status(200).render("stockPage", {
+    StockSym: sym.toUpperCase(),
+  });
+};
+
+exports.stockDetails = async (req, res, next) => {
+  const sym = req.params.stockSymbol;
+
   res.status(200).render("stockPage", {
     StockSym: sym.toUpperCase(),
   });
