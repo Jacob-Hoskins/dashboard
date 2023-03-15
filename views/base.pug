@@ -1,6 +1,85 @@
 mixin symbol
     each sym in StockSym
-        a(href="/{:id}")=sym
+        .symbol-data
+            p
+                a(href=`/stocks/${sym}`, class="symbol")=sym
+            
+
+            .symbol-params
+                //- 1 week
+                //- RSI 
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+                
+                //- Stoch
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+
+                //- StochRSI
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+
+                //- MACD
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+
+                //- 2 week
+                //- RSI 
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+                
+                //- Stoch
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+
+                //- StochRSI
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+
+                //- MACD
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+                
+                //- 1 month
+                //- RSI 
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+                
+                //- Stoch
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+
+                //- StochRSI
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
+
+                //- MACD
+                if num <= 30
+                    p.pass-test &#x2713
+                else  
+                    p.fail-test X
 
 html
     head
@@ -16,18 +95,38 @@ html
 
         // header 
         include _header
+        
+        .int-indicator 
+            .interval-div 
+                .time-frame 
+                    p 1 week
+                .indicator-row
+                    p rsi 
+                    p stoch 
+                    p stochRSI 
+                    p MACD
+            
+            .interval-div 
+                .time-frame  
+                    p 2 week
+                .indicator-row
+                    p rsi 
+                    p stoch 
+                    p stochRSI 
+                    p macd
+            
+            
+            .interval-div 
+                .time-frame  
+                    p 1 month
+                .indicator-row
+                    p rsi 
+                    p stoch 
+                    p stochRSI 
+                    p MACD
 
-        .parameters
-            p symbol 
-            p RSI 
-            p Stoch 
-            p StochRSI 
-            p MACD
 
         .syms
-            //- p #{StockName}
-            //- p #{StockSym}
-            //- p #{test}
             +symbol()
 
 
