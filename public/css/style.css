@@ -29,15 +29,13 @@ footer {
 }
 
 /* Symbol styles */
-.syms {
+/* .syms {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .symbol {
-  /* position: absolute; */
-  /* z-index: 0; */
   border-bottom: black 1px solid;
   width: 100%;
 }
@@ -59,7 +57,7 @@ footer {
 
 .fail-test {
   color: red;
-}
+} */
 
 /* Indicator div */
 .int-indicator {
@@ -82,5 +80,34 @@ footer {
 .indicator-row {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* Equity Card */
+.main-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(168, 168, 168);
+  margin: 3rem;
+  border-radius: 16px;
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.521);
+}
+
+.card-comp-info {
+  padding-left: 1.7rem;
+}
+
+.time-frame-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-time-frame {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
   justify-content: space-evenly;
 }
