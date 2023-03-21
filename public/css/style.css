@@ -28,37 +28,6 @@ footer {
   background-color: rgb(160, 204, 198);
 }
 
-/* Symbol styles */
-/* .syms {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.symbol {
-  border-bottom: black 1px solid;
-  width: 100%;
-}
-
-.symbol-data {
-  display: flex;
-  flex-direction: row;
-}
-
-.symbol-params {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.pass-test {
-  color: green;
-}
-
-.fail-test {
-  color: red;
-} */
-
 /* Indicator div */
 .int-indicator {
   display: flex;
@@ -110,4 +79,29 @@ footer {
   width: 100%;
   justify-content: center;
   justify-content: space-evenly;
+}
+
+.pass-fail-checkmarks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  width: 6rem;
+  height: 2.7rem;
+  text-align: center;
+  border: solid black 1px;
+  border-radius: 12px;
+}
+
+.btn-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
