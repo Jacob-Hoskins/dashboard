@@ -17,7 +17,6 @@ exports.getAllSymbols = async (req, res, next) => {
     // options.testData.push(x.data.data[y].symbol);
     // options.symbolCompName.push(x.data.data[y].name);
   }
-  console.log(options.testData);
 
   res.status(200).render("base", {
     // StockName: options.symbolCompName,
