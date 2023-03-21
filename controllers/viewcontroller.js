@@ -8,13 +8,21 @@ exports.getAllSymbols = async (req, res, next) => {
   const stock = x.data.data[0].name;
   const symbol = stocks.symbol.toString();
 
+  //turned two list into dict (NOT COMPLETED) send that single list of dicts to base file and extract from there like in the cards for the tour
   for (let y = 0; y <= x.data.data.length - 1; y++) {
-    options.testData.push(x.data.data[y].symbol);
+    let stockSym = x.data.data[y].symbol;
+    let compName = x.data.data[y].name;
+    let symDict = { sym: stockSym, name: compName };
+    options.testData.push(symDict);
+    // options.testData.push(x.data.data[y].symbol);
+    // options.symbolCompName.push(x.data.data[y].name);
   }
+  console.log(options.testData);
 
   res.status(200).render("base", {
-    StockName: stock,
-    StockSym: options.testData,
+    // StockName: options.symbolCompName,
+    // StockSym: options.testData,
+    StockData: options.testData,
     num: "5",
   });
 };

@@ -81,6 +81,27 @@ mixin symbol
                 else  
                     p.fail-test X
 
+
+
+mixin symbolCard()
+    each sym in StockSym
+
+        .main-card
+            div.card-comp-info 
+                p=sym.sym
+                p=sym.name
+            .time-frame-card 
+                .top-time-frame 
+                    div 
+                        p 1 week
+                    
+                    div 
+                        p 2 week 
+                div 
+                    p 1 month
+
+
+
 html
     head
         meta(charset='UTF-8')
@@ -96,41 +117,44 @@ html
         // header 
         include _header
         
-        .int-indicator 
-            .interval-div 
-                .time-frame 
-                    p 1 week
-                .indicator-row
-                    p rsi 
-                    p stoch 
-                    p stochRSI 
-                    p MACD
+        //- .int-indicator 
+        //-     .interval-div 
+        //-         .time-frame 
+        //-             p 1 week
+        //-         .indicator-row
+        //-             p rsi 
+        //-             p stoch 
+        //-             p stochRSI 
+        //-             p MACD
             
-            .interval-div 
-                .time-frame  
-                    p 2 week
-                .indicator-row
-                    p rsi 
-                    p stoch 
-                    p stochRSI 
-                    p macd
+        //-     .interval-div 
+        //-         .time-frame  
+        //-             p 2 week
+        //-         .indicator-row
+        //-             p rsi 
+        //-             p stoch 
+        //-             p stochRSI 
+        //-             p macd
             
             
-            .interval-div 
-                .time-frame  
-                    p 1 month
-                .indicator-row
-                    p rsi 
-                    p stoch 
-                    p stochRSI 
-                    p MACD
+        //-     .interval-div 
+        //-         .time-frame  
+        //-             p 1 month
+        //-         .indicator-row
+        //-             p rsi 
+        //-             p stoch 
+        //-             p stochRSI 
+        //-             p MACD
 
 
         .syms
-            +symbol()
+            //- +symbol()
+            //- each name in StockName
+            +symbolCard()
+            
 
 
             // FOOTER
-        include _footer
+        //- include _footer
 
         script(src="/scripts/script.js") 
