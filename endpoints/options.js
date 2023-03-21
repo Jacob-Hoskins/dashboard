@@ -28,3 +28,4 @@ exports.oneWeekRSI = {
 };
 
 exports.testData = [];
+exports.symbolCompName = [];
