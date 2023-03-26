@@ -2,7 +2,9 @@ const path = require("path");
 const express = require("express");
 const { json } = require("express");
 const pug = require("pug");
+const bodyParser = require("body-parser");
 const viewRouter = require("./routes/viewRoutes");
+const userRouter = require("./routes/userRoutes");
 const axios = require("axios");
 const options = require("./endpoints/options");
 
@@ -19,6 +21,11 @@ app.use(
   })
 );
 
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
+
 // Middlewear
 // app.use(async (req, res, next) => {
 //   let x = await axios.get(options.allStocksURL, options.allStockOptions);
@@ -32,6 +39,7 @@ app.use(
 // ROUTES
 app.get("/", viewRouter);
 app.use("/stocks", viewRouter);
+app.use("/accounts", userRouter);
 
 // app.get("/placeholderStockSylmbol", (req, res) => {
 //   res.end("Stock detail page");
