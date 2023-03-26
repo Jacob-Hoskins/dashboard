@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+header {
+  margin-bottom: 5rem;
+}
+
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -17,11 +21,6 @@ nav {
 nav input {
   width: 15rem;
   height: 1.5rem;
-}
-
-nav button {
-  width: 3.5rem;
-  border-radius: 15px;
 }
 
 footer {
@@ -104,4 +103,34 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+/* Create Account Page */
+.sign-up-div {
+  padding: 15%;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-form button {
+  width: 10rem;
+}
+
+.sign-up-button {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Login Page */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-div {
+  padding: 15%;
 }
